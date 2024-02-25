@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8" lang="zh">
     <meta name=”viewport” content=”target-densitydpi=320,width=640,user-scalable=no”>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
     <title>Title</title>
     <style>
         .buttons{
@@ -224,6 +225,8 @@
 <div class="controller">
     <div class="controller-over">
         <button id="fullscreen">Fullscreen</button>
+        <br>
+        <div>Latency: <span id="latency" updateat="0">-1</span> ms</div>
     </div>
     <div class="buttons">
         <div class='region-set'>
@@ -282,6 +285,15 @@
 
 <script>
   let startBtn, currentBtn;
+  let latency_element = document.getElementById("latency");
+  let ws_available;
+  let socket;
+  try{
+    socket = io.connect(location.protocol + '//' + document.domain + ':' + location.port); // 连接到服务器
+    ws_available = true;
+  }catch (e) {
+    ws_available = false;
+  }
   document.querySelectorAll("button").forEach(btn =>{
     if(btn.id === "fullscreen"){
       btn.addEventListener("click", () => toggle_fullscreen());
@@ -310,12 +322,11 @@
           startBtn = rect;
         }
       }
-
-      {#const touch = event.touches[0];#}
-
     });  })
   function send_touch(region) {
-    fetch(`/touch?region=${region}`)
+    if(ws_available){
+      socket.emit('message', JSON.stringify({"action": "touch", "regions": [region]}))
+    }
   }
   function toggle_fullscreen() {
     if (document.fullscreenElement){
@@ -323,6 +334,29 @@
     } else {
       document.documentElement.requestFullscreen();
     }
+  }
+  if(ws_available) {
+    setInterval(() => {
+      latency_element.setAttribute("updateat", new Date().getTime())
+      socket.emit('ping', 'ping')
+    }, 500)
+    socket.on('pong', function(resp) {
+      if(resp==="pong"){
+        latency_element.innerText = (new Date().getTime() - parseFloat(latency_element.getAttribute("updateat"))).toString()
+      } else {
+        latency_element.innerText = "-1"
+      }
+    })
+    socket.on('response', function(response) {
+      let resp = JSON.parse(response);
+      console.log(resp)
+      switch (resp.action) {
+        case "touch":
+          if (resp.msg !== 'ok'){
+            alert(resp.msg)
+          }
+      }
+    });
   }
 </script>
 </body>

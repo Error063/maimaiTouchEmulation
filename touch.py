@@ -156,20 +156,6 @@ class TouchSocket:
                         break
                     case _:
                         client.send(json.dumps({'msg': 'unknown'}).encode("utf8"))
-                # if recv_data.startswith("(") and recv_data.endswith(")"):
-                #     if self._touch.allow_to_send_touch:
-                #         client.send(json.dumps({'msg': 'ok'}).encode("utf8"))
-                #         self._touch.send_multi_touch(recv_data[1:-1].split(","))
-                #     else:
-                #         client.send(json.dumps({'msg': "unavailable"}).encode("utf8"))
-                # elif recv_data == "exit":
-                #     client.send(json.dumps({'msg': 'bye'}).encode("utf8"))
-                #     client.close()
-                #     break
-                # elif recv_data == "ping":
-                #     client.send(json.dumps({'msg': 'pong'}).encode("utf8"))
-                # else:
-                #     client.send(json.dumps({'msg': 'unknown'}).encode("utf8"))
         except ConnectionResetError as e:
             print("Connection closed")
             client.close()

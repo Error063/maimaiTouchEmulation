@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8" lang="zh">
     <meta name=”viewport” content=”target-densitydpi=320,width=640,user-scalable=no”>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
     <title>Title</title>
     <style>
+        html{
+            touch-action: manipulation;
+        }
         body{
             overflow: hidden;
         }
@@ -21,11 +25,12 @@
             margin: 3px;
             padding: 10px;
             border: black solid 1px;
-            border-radius: 50%;
+            {#border-radius: 50%;#}
             font-size: 16px;
             text-align: center;
             width: 40px;
             height: 40px;
+            scale: 130%;
         }
 
         .buttons button:hover {
@@ -58,6 +63,18 @@
             height: 200px;
             background-color: #aaa;
             padding: 30px;
+        }
+
+        .set-A{
+            z-index: 1000;
+        }
+
+        .set-D{
+            z-index: 1000;
+        }
+
+        .set-E{
+            z-index: 999;
         }
 
         #rg-A1{
@@ -238,7 +255,7 @@
         <button id="scale" style="width: 55px; height: 55px;">Scale</button>
     </div>
     <div class="buttons">
-        <div class='region-set'>
+        <div class='region-set set-A'>
             <button class='btn btn-primary' id='rg-A1'>A1</button>
             <button class='btn btn-primary' id='rg-A2'>A2</button>
             <button class='btn btn-primary' id='rg-A3'>A3</button>
@@ -249,7 +266,7 @@
             <button class='btn btn-primary' id='rg-A8'>A8</button>
         </div>
         <br>
-        <div class='region-set'>
+        <div class='region-set set-B'>
             <button class='btn btn-primary' id='rg-B1'>B1</button>
             <button class='btn btn-primary' id='rg-B2'>B2</button>
             <button class='btn btn-primary' id='rg-B3'>B3</button>
@@ -260,12 +277,12 @@
             <button class='btn btn-primary' id='rg-B8'>B8</button>
         </div>
         <br>
-        <div class='region-set'>
+        <div class='region-set set-C'>
             <button class='btn btn-primary' id='rg-C1'>C1</button>
             <button class='btn btn-primary' id='rg-C2'>C2</button>
         </div>
         <br>
-        <div class='region-set'>
+        <div class='region-set set-D'>
             <button class='btn btn-primary' id='rg-D1'>D1</button>
             <button class='btn btn-primary' id='rg-D2'>D2</button>
             <button class='btn btn-primary' id='rg-D3'>D3</button>
@@ -276,7 +293,7 @@
             <button class='btn btn-primary' id='rg-D8'>D8</button>
         </div>
         <br>
-        <div class='region-set'>
+        <div class='region-set set-E'>
             <button class='btn btn-primary' id='rg-E1'>E1</button>
             <button class='btn btn-primary' id='rg-E2'>E2</button>
             <button class='btn btn-primary' id='rg-E3'>E3</button>
@@ -353,7 +370,7 @@
             startBtn = btn;
             currentBtn = btn;
             send_touch(region);
-          });
+          },{passive: false});
           document.addEventListener("touchmove", (event) => {
             event.preventDefault();
             console.log(event.touches.length)
@@ -367,7 +384,10 @@
                 startBtn = rect;
               }
             }
-          });
+          },{passive: false});
+          document.addEventListener("gesturestart", (event) => {
+            event.preventDefault();
+          },{passive: false})
         }
         return;
     }

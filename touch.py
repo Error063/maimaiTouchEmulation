@@ -3,12 +3,14 @@ import sys
 import threading
 import time
 import socket
+import win32api
+import win32con
 
 import serial
 
 
 class Touch:
-    def __init__(self, port="COM1", baudrate=9600, touch_side="L"):
+    def __init__(self, port="COM33", baudrate=9600, touch_side="L", force_touch=False):
         self.touch_region_maps = {'A1': [1, 0, 0, 0], 'A2': [2, 0, 0, 0], 'A3': [4, 0, 0, 0], 'A4': [8, 0, 0, 0],
                                   'A5': [0, 1, 0, 0], 'A6': [0, 2, 0, 0], 'A7': [0, 4, 0, 0], 'A8': [0, 8, 0, 0],
                                   'E7': [0, 16, 0, 0], 'E8': [0, 32, 0, 0], 'B1': [0, 0, 1, 0], 'B2': [0, 0, 2, 0],
@@ -18,6 +20,16 @@ class Touch:
                                   'B7': [0, 0, 0, 4], 'B8': [0, 0, 0, 8], 'C1': [0, 0, 0, 16], 'C2': [0, 0, 0, 32],
                                   'D1': [0, 0, 0, 64], 'D2': [0, 0, 0, 128], 'D3': [0, 0, 0, 256], 'D4': [0, 0, 0, 512],
                                   'D5': [0, 0, 0, 1024], 'D6': [0, 0, 0, 2048]}
+
+        self.key_maps = {
+            "L": {
+                'K1': ord("W"), 'K2': ord("E"), 'K3': ord("D"), 'K4': ord("C"), 'K5': ord("X"), 'K6': ord("Z"), 'K7': ord("A"), 'K8': ord("Q"), "SEL": ord('3')
+            },
+            "R": {
+                'K1': ord("B"), 'K2': ord("A"), 'K3': ord("S"), 'K4': ord("V"), 'K5': ord("N"), 'K6': ord("M"), 'K7': ord("J"), 'K8': ord("H"), "SEL": ord('2')
+            }
+        }
+        self.force_touch = force_touch
 
         self._touch = serial.Serial(port, baudrate, timeout=1)
 
@@ -56,11 +68,11 @@ class Touch:
         return touch_packet
 
     def send_touch(self, region: str):
-        if self.allow_to_send_touch:
+        if self.allow_to_send_touch or self.force_touch:
             self.__write(self.__make_touch_send_pkg(self.touch_region_maps[region.upper()]))
 
     def send_multi_touch(self, regions: list[str]):
-        if self.allow_to_send_touch:
+        if self.allow_to_send_touch or self.force_touch:
             pkg = [0, 0, 0, 0]
             for region in regions:
                 if region.upper() in self.touch_region_maps:
@@ -69,6 +81,12 @@ class Touch:
                         pkg[i] += current_region[i]
 
             self.__write(self.__make_touch_send_pkg(pkg))
+
+    def press_key(self, key: str):
+        if (self.allow_to_send_touch or self.force_touch) and key in self.key_maps[self._touch_side].keys():
+            win32api.keybd_event(self.key_maps[self._touch_side][key], 0, 0, 0)
+            win32api.keybd_event(self.key_maps[self._touch_side][key], 0, win32con.KEYEVENTF_KEYUP, 0)
+
 
     @staticmethod
     def __get_hex_char(_hex):
@@ -167,4 +185,9 @@ class TouchSocket:
 
 
 if __name__ == "__main__":
-    TouchSocket()
+    # TouchSocket()
+    t = Touch(force_touch=True)
+    input("Press Enter")
+    while True:
+        time.sleep(60/(88*2))
+        t.send_multi_touch(regions=list(t.touch_region_maps.keys()))

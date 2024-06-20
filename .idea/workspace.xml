@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6d4f25f-c5b5-4eec-8f47-376ead2eec5a" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/maiAutoPlay.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/maiAutoPlay.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="f6d4f25f-c5b5-4eec-8f47-376ead2eec5a" name="更改" comment="ws support">
+      <change afterPath="$PROJECT_DIR$/templates/new_index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/touch.py" beforeDir="false" afterPath="$PROJECT_DIR$/touch.py" afterDir="false" />
     </list>
@@ -40,7 +39,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Error063&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Error063/maimaiTouchEmulation.git&quot;,
+    &quot;accountId&quot;: &quot;ef5961f3-5e1d-4313-8ef9-1c4e7d977a39&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://C:/Program Files/Python312/Lib/urllib/parse.py" root0="SKIP_INSPECTION" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2023.3/python_stubs/719885090/builtins.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/.venv/Lib/site-packages/serial/serialposix.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/.venv/Lib/site-packages/serial/serialutil.py" root0="SKIP_INSPECTION" />
@@ -55,38 +67,77 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Flask 服务器.Flask (app.py).executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript 调试.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript 调试.touchui.html.executor&quot;: &quot;Run&quot;,
-    &quot;Python.app.executor&quot;: &quot;Run&quot;,
-    &quot;Python.decode.executor&quot;: &quot;Run&quot;,
-    &quot;Python.gen.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.serial2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.touch (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.web.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Jetbrains/PycharmProjects/maiAutoPlay/app.py&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.templateLanguages.PyTemplateLanguageModulesConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Flask 服务器.Flask (app.py).executor": "Run",
+    "JavaScript 调试.index.html.executor": "Run",
+    "JavaScript 调试.new_index.html.executor": "Run",
+    "JavaScript 调试.touchui.html.executor": "Run",
+    "Python.aaa.executor": "Run",
+    "Python.aaaa.executor": "Run",
+    "Python.app.executor": "Run",
+    "Python.db.executor": "Run",
+    "Python.decode.executor": "Run",
+    "Python.gen.executor": "Run",
+    "Python.jcghj.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.scratch.executor": "Run",
+    "Python.serial2.executor": "Run",
+    "Python.t2.executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.touch (1).executor": "Run",
+    "Python.web.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "master",
+    "last.edited.regexp": "Migration checksum mismatch for migration version 1",
+    "last_opened_file_path": "E:/Jetbrains/PycharmProjects/maiAutoPlay",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/新建临时文件": [
+      "Python"
+    ],
+    "com.intellij.ide.scratch.ScratchImplUtil$2/更改语言": [
+      "Python"
+    ]
   }
-}</component>
-  <component name="RunManager" selected="JavaScript 调试.index.html">
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/maiAutoPlay/templates/index.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="touchui.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/maiAutoPlay/templates/touchui.html" useBuiltInWebServerPort="true">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Error063\AppData\Roaming\JetBrains\PyCharm2023.3\scratches" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.app">
+    <configuration name="aaa" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="maiAutoPlay" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/aaa.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -112,7 +163,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="gen" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="jcghj" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="maiAutoPlay" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jcghj.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="maiAutoPlay" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -126,7 +200,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/gen.py" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -191,7 +265,6 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="E:\Jetbrains\PycharmProjects\maiAutoPlay\.venv\Scripts\python.exe" />
-      <option name="SDK_NAME" value="Python 3.12 (maiAutoPlay)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -201,28 +274,29 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Flask 服务器.Flask (app.py)" />
-      <item itemvalue="JavaScript 调试.index.html" />
-      <item itemvalue="JavaScript 调试.touchui.html" />
+      <item itemvalue="Flask server.Flask (app.py)" />
       <item itemvalue="Python.touch" />
-      <item itemvalue="Python.gen" />
+      <item itemvalue="Python.jcghj" />
+      <item itemvalue="Python.aaa" />
       <item itemvalue="Python.app" />
+      <item itemvalue="Python.scratch" />
       <item itemvalue="Python.touch (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript 调试.index.html" />
         <item itemvalue="Python.app" />
-        <item itemvalue="Python.gen" />
         <item itemvalue="Python.touch (1)" />
-        <item itemvalue="JavaScript 调试.touchui.html" />
+        <item itemvalue="Python.jcghj" />
+        <item itemvalue="Python.scratch" />
+        <item itemvalue="Python.aaa" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-50da183f06c8-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13135.95" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.17011.127" />
+        <option value="bundled-python-sdk-48aec45f0201-7e9c3bbb6e34-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.17011.127" />
       </set>
     </attachedChunks>
   </component>
@@ -239,8 +313,50 @@
       <workItem from="1708661356312" duration="872000" />
       <workItem from="1708702000832" duration="9571000" />
       <workItem from="1708748235834" duration="14106000" />
-      <workItem from="1708835235972" duration="6678000" />
+      <workItem from="1708835235972" duration="8070000" />
+      <workItem from="1709719064882" duration="10654000" />
+      <workItem from="1709952350932" duration="887000" />
+      <workItem from="1709954915040" duration="23000" />
+      <workItem from="1709957406917" duration="3090000" />
+      <workItem from="1709981336721" duration="6454000" />
+      <workItem from="1710117237972" duration="4289000" />
+      <workItem from="1710136466652" duration="10517000" />
+      <workItem from="1710202457036" duration="15523000" />
+      <workItem from="1710304210327" duration="1952000" />
+      <workItem from="1710582585599" duration="7892000" />
+      <workItem from="1710719978966" duration="10645000" />
+      <workItem from="1710811798096" duration="3723000" />
+      <workItem from="1710827872566" duration="3962000" />
+      <workItem from="1711003816415" duration="6775000" />
+      <workItem from="1711070195868" duration="4153000" />
+      <workItem from="1711077220264" duration="69000" />
+      <workItem from="1711077318028" duration="49000" />
+      <workItem from="1711077377242" duration="100000" />
+      <workItem from="1711098261288" duration="275000" />
+      <workItem from="1711098542402" duration="831000" />
+      <workItem from="1711212571402" duration="3069000" />
+      <workItem from="1711327365791" duration="3784000" />
+      <workItem from="1711341244880" duration="1171000" />
+      <workItem from="1711459872946" duration="598000" />
+      <workItem from="1711718108968" duration="76000" />
+      <workItem from="1711720276707" duration="66000" />
+      <workItem from="1711720383263" duration="6000" />
+      <workItem from="1713679783170" duration="3268000" />
+      <workItem from="1714010478228" duration="27000" />
+      <workItem from="1714619970282" duration="3315000" />
+      <workItem from="1714829323999" duration="1336000" />
+      <workItem from="1714994131282" duration="278000" />
+      <workItem from="1717771701988" duration="8317000" />
     </task>
+    <task id="LOCAL-00001" summary="ws support">
+      <option name="closed" value="true" />
+      <created>1708859840172</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708859840172</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,14 +379,25 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ws support" />
+    <option name="LAST_COMMIT_MESSAGE" value="ws support" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/maiAutoPlay$db.coverage" NAME="db 覆盖结果" MODIFIED="1711216829071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/maiAutoPlay$touch__1_.coverage" NAME="touch (1) Coverage Results" MODIFIED="1717772183292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/maiAutoPlay$t2.coverage" NAME="t2 覆盖结果" MODIFIED="1710229631969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/maiAutoPlay$app.coverage" NAME="app Coverage Results" MODIFIED="1717784827208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/maiAutoPlay$web.coverage" NAME="app 覆盖结果" MODIFIED="1708746981784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/maiAutoPlay$test.coverage" NAME="test 覆盖结果" MODIFIED="1711008504365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/maiAutoPlay$serial2.coverage" NAME="serial2 覆盖结果" MODIFIED="1708349712414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/maiAutoPlay$aaaa.coverage" NAME="aaaa 覆盖结果" MODIFIED="1711075349785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/maiAutoPlay$aaa.coverage" NAME="aaa 覆盖结果" MODIFIED="1711327436208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/maiAutoPlay$decode.coverage" NAME="decode 覆盖结果" MODIFIED="1708626281784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/maiAutoPlay$scratch.coverage" NAME="scratch 覆盖结果" MODIFIED="1713679893205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/maiAutoPlay$main.coverage" NAME="main 覆盖结果" MODIFIED="1708661510815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/maiAutoPlay$Flask__app_py_.coverage" NAME="Flask (app.py) 覆盖结果" MODIFIED="1708769727472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/maiAutoPlay$gen.coverage" NAME="gen 覆盖结果" MODIFIED="1708837553491" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
-    <SUITE FILE_PATH="coverage/maiAutoPlay$web.coverage" NAME="app 覆盖结果" MODIFIED="1708746981784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/maiAutoPlay$decode.coverage" NAME="decode 覆盖结果" MODIFIED="1708626281784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
-    <SUITE FILE_PATH="coverage/maiAutoPlay$touch__1_.coverage" NAME="touch (1) 覆盖结果" MODIFIED="1708746016402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/maiAutoPlay$app.coverage" NAME="app 覆盖结果" MODIFIED="1708839039194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/maiAutoPlay$main.coverage" NAME="main 覆盖结果" MODIFIED="1708661510815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/maiAutoPlay$jcghj.coverage" NAME="jcghj Coverage Results" MODIFIED="1714619988388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

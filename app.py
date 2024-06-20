@@ -8,7 +8,7 @@ import touch as t
 
 app = Flask(__name__, template_folder='templates')
 socketio = SocketIO(app, cors_allowed_origins="*")  # 允许跨域请求
-touch = t.Touch(port="COM1", baudrate=9600, touch_side="L")
+touch = t.Touch(port="COM33", baudrate=9600, touch_side="L", force_touch=True)
 
 
 @app.route('/')
@@ -16,13 +16,18 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/touch')
-def touch_handler():
-    region = request.args.get('region')
-    # sock.send(json.dumps({'action': "touch", "regions": [region]}).encode('utf-8'))
-    print(type(touch))
-    touch.send_multi_touch([region])
-    return {'resp': 'ok', "data": ""}
+@app.route('/disable-gesture')
+def disable_gesture():
+    return render_template('index.html')
+
+
+# @app.route('/touch')
+# def touch_handler():
+#     region = request.args.get('region')
+#     # sock.send(json.dumps({'action': "touch", "regions": [region]}).encode('utf-8'))
+#     print(type(touch))
+#     touch.send_multi_touch([region])
+#     return {'resp': 'ok', "data": ""}
 
 
 @socketio.on('ping')
@@ -46,6 +51,16 @@ def handle_message(data):
                 emit('response', json.dumps({'msg': 'ok', "action": 'touch'}))
             else:
                 emit('response', json.dumps({'msg': 'not allowed', 'action': 'touch'}))
+        case 'press':
+            if touch.allow_to_send_touch or True:
+                if data["key"] in touch.key_maps[touch._touch_side]:
+                    touch.press_key(data["key"])
+                    emit('response', json.dumps({'msg': 'ok', "action": 'press'}))
+                else:
+                    emit('response', json.dumps({'msg': 'unknown key', 'action': 'press'}))
+                emit('response', json.dumps({'msg': 'ok', "action": 'press'}))
+            else:
+                emit('response', json.dumps({'msg': 'not allowed', 'action': 'press'}))
         case 'ping':
             emit('response', json.dumps({'msg': 'pong', "action": "ping"}))
         case 'check':

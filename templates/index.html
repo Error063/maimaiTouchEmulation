@@ -305,13 +305,6 @@
   }catch (e) {
     ws_available = false;
   }
-  document.getElementById("scale").addEventListener("click",()=>{
-    let scale = parseInt(prompt("Set scale percent", "100"))
-    if(scale>75){
-      document.getElementsByClassName("controller")[0].style.scale = `${scale}%`;
-      document.getElementsByClassName("controller")[0].style.marginTop = `${scale+20}px`;
-    }
-  })
   document.querySelectorAll("button").forEach(btn =>{
     switch (btn.id) {
       case "fullscreen":
@@ -320,6 +313,15 @@
       case "select":
         btn.addEventListener("click", () => {
           socket.emit('message', JSON.stringify({"action": "press", "key": "SEL"}))
+        })
+        return;
+      case "scale":
+        btn.addEventListener("click",()=>{
+          let scale = parseInt(prompt("Set scale percent", "100"))
+          if(scale>75){
+            document.getElementsByClassName("controller")[0].style.scale = `${scale}%`;
+            document.getElementsByClassName("controller")[0].style.marginTop = `${scale+20}px`;
+          }
         })
         return;
       case "gesture":
